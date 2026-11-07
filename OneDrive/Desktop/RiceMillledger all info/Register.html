@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RiceMillLedger Registration</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="regstyle.css">
+</head>
+<body>
+
+    <div class="page">
+        <div class="container">
+            <h2 class="title">Registration</h2>
+
+            <form id="regForm" novalidate>
+                <div class="field">
+                    <input type="text" id="name" name="name"
+                           placeholder="Enter your name"
+                           autocomplete="name" aria-label="Name" required>
+                    <span class="error" id="nameError"></span>
+                </div>
+
+                <div class="field">
+                    <input type="email" id="email" name="email"
+                           placeholder="Enter your email"
+                           autocomplete="email" aria-label="Email" required>
+                    <span class="error" id="emailError"></span>
+                </div>
+
+                <div class="field">
+                    <input type="password" id="password" name="password"
+                           placeholder="Create password"
+                           autocomplete="new-password" minlength="8"
+                           aria-label="Create password" required>
+                    <span class="error" id="passwordError"></span>
+                </div>
+
+                <div class="field">
+                    <input type="password" id="confirmPassword" name="confirmPassword"
+                           placeholder="Confirm password"
+                           autocomplete="new-password" minlength="8"
+                           aria-label="Confirm password" required>
+                    <span class="error" id="confirmError"></span>
+                </div>
+
+                <div class="field">
+                    <label class="terms" for="terms">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <span>I accept all terms &amp; conditions</span>
+                    </label>
+                    <span class="error" id="termsError"></span>
+                </div>
+
+                <button type="submit" class="submit">Register Now</button>
+
+                <p id="message" role="status" aria-live="polite"></p>
+
+                <p class="login-link">Already have an account? <a href="../login/login.html" id="back-to-login">Login now</a></p>
+            </form>
+        </div>
+
+        <!-- Right side heading (change or delete this text as you like) -->
+        <div class="hero" aria-hidden="true">
+            <h1>Rice<br>Mill<br>Ledger</h1>
+        </div>
+    </div>
+
+    <script type="module" src="register.js"></script>
+</body>
+</html>
